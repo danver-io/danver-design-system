@@ -1,13 +1,11 @@
 {
   "name": "@danver-io/danver-design-system",
-  "version": "1.0.25",
+  "version": "1.0.39",
   "main": "dist/index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf ./dist && tsc",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist && babel src/component --out-dir dist --copy-files"
+    "build": "rm -rf ./dist && tsc && yarn copy-files",
+    "copy-files": "cp -r src/asset ./dist/"
   },
   "babel": {
     "presets": [
