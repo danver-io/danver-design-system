@@ -1,6 +1,6 @@
 {
   "name": "@danver-io/danver-design-system",
-  "version": "1.0.44",
+  "version": "1.0.46",
   "main": "dist/index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -47,6 +47,7 @@
   "devDependencies": {
     "@babel/cli": "^7.23.0",
     "@babel/preset-react": "^7.22.15",
+    "@svgr/cli": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.58",
