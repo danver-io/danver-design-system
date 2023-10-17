@@ -1,6 +1,6 @@
 {
   "name": "@danver-io/danver-design-system",
-  "version": "1.0.39",
+  "version": "1.0.44",
   "main": "dist/index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -58,12 +58,5 @@
     "typescript": "^4.9.5",
     "webpack-cli": "^5.1.4"
   },
-  "types": "./dist/index.d.ts",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "bugs": {
-    "url": "https://github.com/danver-io/danver-design-system/issues"
-  },
-  "homepage": "https://github.com/danver-io/danver-design-system#readme",
-  "author": "",
-  "license": "ISC"
+  "types": "./dist/index.d.ts"
 }

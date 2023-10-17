@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as LoadingIcon } from './ic_loading.svg';
+import { ReactComponent as LoadingIcon } from '../../asset/image/ic_loading.svg';
 
 export interface IProps {
     className?: string
