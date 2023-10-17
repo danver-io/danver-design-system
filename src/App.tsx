@@ -1,16 +1,31 @@
-import React from 'react';
-import './App.css';
-import Button from "./component/button/Button";
+import React from 'react'
+import './App.css'
+import ResponsiveHeader from './component/navigation/ResponsiveHeader/ResponsiveHeader'
+import {IHeadlessNavButton} from './component/navigation/ResponsiveHeader/HeadlessNavButton'
+
+const menus: IHeadlessNavButton[] = [
+    {name: 'Menu1', href: '/menu1'},
+    {name: 'Menu2', href: '/menu2'},
+    {name: 'Menu3', href: '/menu3'},
+]
 
 function App() {
     return (
         <>
-            <h1 className="text-3xl font-bold underline text-red-600">
-                Simple React Typescript Tailwind Sample
-            </h1>
-            <Button label={'text'} variant={'primary'} isLoading={true}/>
+            <ResponsiveHeader
+                className={'bg-bg.inset'}
+                items={menus}
+                logo={
+                    <a href="https://flowbite.com/" className="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                            Flowbite
+                        </span>
+                    </a>
+                }
+            />
         </>
-    );
+    )
 }
 
-export default App;
+export default App
