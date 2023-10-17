@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import ResponsiveHeader from './component/navigation/ResponsiveHeader/ResponsiveHeader'
 import {IHeadlessNavButton} from './component/navigation/ResponsiveHeader/HeadlessNavButton'
 
