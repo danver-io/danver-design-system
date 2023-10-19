@@ -3,9 +3,9 @@ import ResponsiveHeader from './component/navigation/ResponsiveHeader/Responsive
 import {IHeadlessNavButton} from './component/navigation/ResponsiveHeader/HeadlessNavButton'
 
 const menus: IHeadlessNavButton[] = [
-    {id: 'menu1', name: 'Menu1', href: '/menu1'},
-    {id: 'menu2', name: 'Menu2', href: '/menu2'},
-    {id: 'menu3', name: 'Menu3', href: '/menu3'},
+    // {id: 'menu1', name: 'Menu1', href: '/menu1'},
+    // {id: 'menu2', name: 'Menu2', href: '/menu2'},
+    // {id: 'menu3', name: 'Menu3', href: '/menu3'},
 ]
 
 function App() {
