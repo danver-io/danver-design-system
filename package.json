@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf ./dist && tsc && yarn copy-files && mv ./dist/components.js ./dist/index.js && mv ./dist/components.d.ts ./dist/index.d.ts",
-    "copy-files": "copyfiles -u 1 src/**/*.css ./dist/"
+    "copy-files": "copyfiles -u 1 src/**/*.css ./dist/",
+    "deploy": "yarn build && yarn publish"
   },
   "babel": {
     "presets": [

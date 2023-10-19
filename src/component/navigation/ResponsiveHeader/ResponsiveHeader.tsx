@@ -28,6 +28,7 @@ const ResponsiveHeader: React.FC<IProps> = ({className, logo, items}) => {
                             {items?.map(item => (
                                 <HeadlessNavButton
                                     {...item}
+                                    key={item.id}
                                     className={'block sm:hidden leading-[40px] text-fg.default hover:text-blue-700'}
                                 />
                             ))}
@@ -44,9 +45,9 @@ const ResponsiveHeader: React.FC<IProps> = ({className, logo, items}) => {
                             viewBox="0 0 17 14">
                             <path
                                 stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
                                 d="M1 1h15M1 7h15M1 13h15"
                             />
                         </svg>
@@ -54,10 +55,11 @@ const ResponsiveHeader: React.FC<IProps> = ({className, logo, items}) => {
                 </div>
                 {isExpanded && (
                     <div>
-                        <ul className={'flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50'}>
+                        <ul className={'flex flex-col p-4 mt-4 mx-4 border border-gray-100 rounded-lg bg-gray-50'}>
                             {items?.map(item => (
                                 <HeadlessNavButton
                                     {...item}
+                                    key={item.id}
                                     className={
                                         'py-[12px] px-[16px] text-gray-900 rounded hover:bg-gray-100 text-body.large'
                                     }

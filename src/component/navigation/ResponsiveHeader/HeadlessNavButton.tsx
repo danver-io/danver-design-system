@@ -2,6 +2,7 @@
 import React from 'react'
 
 export interface IHeadlessNavButton {
+    id: string
     name: string
     href: string
     className?: string
