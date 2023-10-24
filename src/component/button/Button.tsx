@@ -104,7 +104,9 @@ const Button: React.FC<IProps> = ({
                         {leadingIcon}
                     </div>
                 )}
-                <p className={`${variantStyles.get(variant)?.textClassName} ${sizeStyles.get(size)?.textClassName}`}>
+                <p
+                    className={`${variantStyles.get(variant)?.textClassName} ${sizeStyles.get(size)
+                        ?.textClassName} whitespace-nowrap truncate`}>
                     {label}
                 </p>
                 {trailingIcon && (

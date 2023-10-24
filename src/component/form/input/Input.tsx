@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-export interface IProps {
+interface IProps {
     className?: string
     inputClassName?: string
     label?: string
@@ -15,16 +15,16 @@ export interface IProps {
 }
 
 const Input: React.FC<IProps> = ({
-                                     inputClassName,
-                                     label,
-                                     placeholder,
-                                     disabled = false,
-                                     required = false,
-                                     defaultValue,
-                                     onChanged,
-                                     renderRight,
-                                     children
-                                 }) => {
+    inputClassName,
+    label,
+    placeholder,
+    disabled = false,
+    required = false,
+    defaultValue,
+    onChanged,
+    renderRight,
+    children,
+}) => {
     return (
         <div className={'flex flex-col gap-y-[4px] text-fg.muted'}>
             {label && (

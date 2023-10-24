@@ -11,7 +11,8 @@
     "strictNullChecks": true,
     "noImplicitAny": true,
     "removeComments": true,
-    "typeRoots": ["index.d.ts", "node_modules/@types"]
+    "typeRoots": ["index.d.ts", "node_modules/@types"],
+    "forceConsistentCasingInFileNames": false,
   },
   "include": [
     "src"
