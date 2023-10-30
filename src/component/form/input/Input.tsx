@@ -16,6 +16,7 @@ interface IProps {
 
 const Input: React.FC<IProps> = ({
     inputClassName,
+    className,
     label,
     placeholder,
     disabled = false,
@@ -26,7 +27,7 @@ const Input: React.FC<IProps> = ({
     children,
 }) => {
     return (
-        <div className={'flex flex-col gap-y-[4px] text-fg.muted'}>
+        <div className={`flex flex-col gap-y-[4px] text-fg.muted ${className}`}>
             {label && (
                 <p className={'text-[14px] text-fg.default font-semibold'}>
                     {label} {required && '*'}
