@@ -1,8 +1,8 @@
 import React from 'react'
 import ResponsiveHeader from './component/navigation/ResponsiveHeader/ResponsiveHeader'
 import {IHeadlessNavButton} from './component/navigation/ResponsiveHeader/HeadlessNavButton'
-import {ISelectItem, Select} from './component/form/select/Select'
-import Button from './component/button/Button'
+import {ISelectItem} from './component/form/select/Select'
+import CheckBox from './component/form/checkbox/CheckBox'
 
 const menus: IHeadlessNavButton[] = []
 
@@ -14,7 +14,7 @@ const items: ISelectItem[] = [
 
 function App() {
     return (
-        <>
+        <div className={''}>
             <ResponsiveHeader
                 className={'bg-bg.inset'}
                 logo={
@@ -27,21 +27,11 @@ function App() {
                 }
                 items={menus}
             />
-            <div className={'layout-default overflow-hidden '}>
-                <Select
-                    items={items}
-                    onChanged={item => {
-                        console.log(item)
-                    }}
-                />
-                <Button
-                    label={
-                        'beee ee e e e d wdwdwdwd wd wd wd wd wd  wd wd wd wd wd wd wd  wd wd wd wd wdeee ee e e e d wdwdwdweee ee e e e d wdwdwdwd wd wd wd wd wd  wd wd wd wd wd wd wd  wd wd wd wd wdeee ee e e e d wdwdwdwd wd wd wd wd wd  wd wd wd eee ee e e e d wdwdwdwd wd wd wd wd wd  wd wd wd wd wd wd wd  wd wd wd wd wdwd wd wd wd  wd wd wd wd wdd wd wd wd wd wd  wd wd wd wd wd wd wd  wd wd wd wd wdeee ee e e e d wdwdwdwd wd wd wd wd wd  wd wd wd wd wd wd wd  wd wd wd wd wdeee ee e e e d wdwdwdwd wd wd wd wd wd  wd wd wd wd wd wd wd  wd wd wd wd wd '
-                    }
-                    variant={'primary'}
-                />
+            <div className={'layout-default overflow-hidden p-[20px]'}>
+                <CheckBox id={'check_1'} label={'Sample Text1'} onChanged={isChecked => console.log(isChecked)} />
+                <CheckBox id={'check_2'} label={'Sample Text2'} onChanged={isChecked => console.log(isChecked)} />
             </div>
-        </>
+        </div>
     )
 }
 
