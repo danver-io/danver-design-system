@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, {HTMLInputTypeAttribute} from 'react'
 
 interface IProps {
     className?: string
@@ -10,8 +10,12 @@ interface IProps {
     placeholder?: string
     renderRight?: React.ReactElement
     disabled?: boolean
+    autoFocus?: boolean
     required?: boolean
+    inputType?: HTMLInputTypeAttribute
     onChanged?: (text: string) => void
+
+    onPressEnter?(): void
 }
 
 const Input: React.FC<IProps> = ({
@@ -24,8 +28,17 @@ const Input: React.FC<IProps> = ({
     defaultValue,
     onChanged,
     renderRight,
+    autoFocus,
+    inputType,
+    onPressEnter,
     children,
 }) => {
+    const onKeyDownEnter = (e: any) => {
+        if (e.key === 'Enter') {
+            onPressEnter && onPressEnter()
+        }
+    }
+
     return (
         <div className={`flex flex-col gap-y-[4px] text-fg.muted ${className}`}>
             {label && (
@@ -37,12 +50,15 @@ const Input: React.FC<IProps> = ({
                 <input
                     className={`border border-border.default rounded-md px-[12px] py-[1px] text-[14px] leading-[26px] text-fg.default ${inputClassName}`}
                     placeholder={placeholder}
+                    type={inputType}
                     disabled={disabled}
                     defaultValue={defaultValue}
+                    autoFocus={autoFocus}
                     onChange={e => {
                         const text = e.target.value
                         onChanged && onChanged(text)
                     }}
+                    onKeyDown={onKeyDownEnter}
                 />
                 {renderRight}
             </div>
