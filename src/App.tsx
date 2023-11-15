@@ -3,6 +3,7 @@ import ResponsiveHeader from './component/navigation/ResponsiveHeader/Responsive
 import {IHeadlessNavButton} from './component/navigation/ResponsiveHeader/HeadlessNavButton'
 import {ISelectItem} from './component/form/select/Select'
 import CheckBox from './component/form/checkbox/CheckBox'
+import Button from './component/button/Button'
 
 const menus: IHeadlessNavButton[] = []
 
@@ -30,6 +31,10 @@ function App() {
             <div className={'layout-default overflow-hidden p-[20px]'}>
                 <CheckBox id={'check_1'} label={'Sample Text1'} onChanged={isChecked => console.log(isChecked)} />
                 <CheckBox id={'check_2'} label={'Sample Text2'} onChanged={isChecked => console.log(isChecked)} />
+                <Button variant={'primary'} label={'안녕'} size={'small'} />
+                <Button variant={'primary'} label={'안녕'} size={'medium'} />
+                <Button variant={'primary'} label={'안녕'} size={'large'} />
+                <Button variant={'primary'} label={'안녕'} size={'large'} className={'h-[100px]'} />
             </div>
         </div>
     )

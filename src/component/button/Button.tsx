@@ -59,19 +59,19 @@ interface SizeStyle {
 
 const sizeStyles = new Map<string, SizeStyle>()
 sizeStyles.set('small', {
-    containerClassName: 'px-[8px] text-[12px] font-semibold leading-[26px] rounded-md h-[28px]',
+    containerClassName: 'px-[8px] text-[12px] font-semibold leading-[26px] rounded-md min-h-[28px]',
     textClassName: '',
     iconClassName: '',
     countClassName: '',
 })
 sizeStyles.set('medium', {
-    containerClassName: 'px-[12px] text-[14px] font-semibold leading-[30px] rounded-md text-body.medium h-[32px]',
+    containerClassName: 'px-[12px] text-[14px] font-semibold leading-[30px] rounded-md text-body.medium min-h-[32px]',
     textClassName: '',
     iconClassName: '',
     countClassName: '',
 })
 sizeStyles.set('large', {
-    containerClassName: 'px-[16px] text-[14px] font-semibold leading-[38px] rounded-md h-[40px]',
+    containerClassName: 'px-[16px] text-[14px] font-semibold leading-[38px] rounded-md min-h-[40px]',
     textClassName: '',
     iconClassName: '',
     countClassName: '',
@@ -80,6 +80,7 @@ sizeStyles.set('large', {
 const buttonClickStyle = 'transform active:scale-[0.95] transition-transform origin-center disabled:transform-none'
 
 const Button: React.FC<IProps> = ({
+    className,
     leadingIcon,
     trailingIcon,
     label,
@@ -92,8 +93,9 @@ const Button: React.FC<IProps> = ({
 }) => {
     return (
         <button
-            className={`flex items-center justify-center ${buttonClickStyle} relative ${variantStyles.get(variant)
-                ?.containerClassName} ${sizeStyles.get(size)?.containerClassName}`}
+            className={`flex items-center justify-center ${className} ${buttonClickStyle} relative ${variantStyles.get(
+                variant,
+            )?.containerClassName} ${sizeStyles.get(size)?.containerClassName}`}
             onClick={onClick}
             disabled={disabled}>
             <div className={`flex justify-center items-center gap-x-[5px] select-none ${isLoading && 'invisible'}`}>
