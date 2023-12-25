@@ -48,7 +48,7 @@ const Input: React.FC<IProps> = ({
             )}
             <div className={'flex gap-x-[4px] items-center'}>
                 <input
-                    className={`border border-border.default rounded-md px-[12px] py-[1px] text-[14px] leading-[26px] text-fg.default ${inputClassName}`}
+                    className={`grow box-border w-full border border-border.default rounded-md px-[12px] py-[1px] text-[14px] leading-[26px] text-fg.default ${inputClassName}`}
                     placeholder={placeholder}
                     type={inputType}
                     disabled={disabled}
