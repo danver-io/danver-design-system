@@ -1,6 +1,6 @@
 {
   "name": "@danver-io/danver-design-system",
-  "version": "1.0.80",
+  "version": "1.0.81",
   "main": "dist/index.js",
   "scripts": {
     "start": "react-scripts start",
