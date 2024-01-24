@@ -4,5 +4,6 @@ import {IHeadlessNavButton} from './component/navigation/ResponsiveHeader/Headle
 import ResponsiveHeader from './component/navigation/ResponsiveHeader/ResponsiveHeader'
 import {ISelectItem, Select} from './component/form/select/Select'
 import CheckBox from './component/form/checkbox/CheckBox'
+import Pagination from './component/pagination/Pagination'
 
-export {Button, Input, ResponsiveHeader, IHeadlessNavButton, Select, ISelectItem, CheckBox}
+export {Button, Input, ResponsiveHeader, IHeadlessNavButton, Select, ISelectItem, CheckBox, Pagination}

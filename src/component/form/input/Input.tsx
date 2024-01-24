@@ -6,6 +6,7 @@ interface IProps {
     inputClassName?: string
     label?: string
     defaultValue?: string
+    value?: string
     children?: any
     placeholder?: string
     renderRight?: React.ReactElement
@@ -26,6 +27,7 @@ const Input: React.FC<IProps> = ({
     disabled = false,
     required = false,
     defaultValue,
+    value,
     onChanged,
     renderRight,
     autoFocus,
@@ -52,6 +54,7 @@ const Input: React.FC<IProps> = ({
                     placeholder={placeholder}
                     type={inputType}
                     disabled={disabled}
+                    value={value}
                     defaultValue={defaultValue}
                     autoFocus={autoFocus}
                     onChange={e => {

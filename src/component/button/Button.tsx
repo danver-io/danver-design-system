@@ -138,7 +138,7 @@ const Button: React.FC<IProps> = ({
                         className={`hds-flight-icon--animation-loading w-[16px] h-[16px] animate-spin ${variantStyles.get(
                             variant,
                         )?.loadingClassName}`}>
-                        <g fill-rule="evenodd" clip-rule="evenodd">
+                        <g fillRule="evenodd" clipRule="evenodd">
                             <path
                                 d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"
                                 opacity=".2"
