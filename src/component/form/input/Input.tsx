@@ -13,28 +13,32 @@ interface IProps {
     disabled?: boolean
     autoFocus?: boolean
     required?: boolean
+    name?: string
     inputType?: HTMLInputTypeAttribute
     onChanged?: (text: string) => void
+    autoComplete?: string | undefined
 
     onPressEnter?(): void
 }
 
 const Input: React.FC<IProps> = ({
-    inputClassName,
-    className,
-    label,
-    placeholder,
-    disabled = false,
-    required = false,
-    defaultValue,
-    value,
-    onChanged,
-    renderRight,
-    autoFocus,
-    inputType,
-    onPressEnter,
-    children,
-}) => {
+                                     inputClassName,
+                                     className,
+                                     label,
+                                     placeholder,
+                                     disabled = false,
+                                     required = false,
+                                     defaultValue,
+                                     value,
+                                     name,
+                                     onChanged,
+                                     renderRight,
+                                     autoFocus,
+                                     inputType,
+                                     autoComplete,
+                                     onPressEnter,
+                                     children,
+                                 }) => {
     const onKeyDownEnter = (e: any) => {
         if (e.key === 'Enter') {
             onPressEnter && onPressEnter()
@@ -53,6 +57,8 @@ const Input: React.FC<IProps> = ({
                     className={`grow box-border w-full border border-border.default rounded-md px-[12px] py-[1px] text-[14px] leading-[26px] text-fg.default ${inputClassName}`}
                     placeholder={placeholder}
                     type={inputType}
+                    name={name}
+                    autoComplete={autoComplete}
                     disabled={disabled}
                     value={value}
                     defaultValue={defaultValue}
